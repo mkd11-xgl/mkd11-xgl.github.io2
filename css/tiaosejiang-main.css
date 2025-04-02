@@ -1,0 +1,150 @@
+/* 包含Bootstrap 4基础 + 原始模板核心功能 + 企业定制样式 */
+/* 版本：2023-08-25 调色匠专用版 */
+
+/***** 基础重置 *****/
+* { box-sizing: border-box }
+body { 
+  font-family: '微软雅黑', 'PingFang SC', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/***** 主色调 *****/
+:root {
+  --primary-blue: #2A5C8A;    /* 主品牌蓝 */
+  --accent-gold: #C9A769;     /* 辅助金色 */
+  --dark-bg: #1A2E40;         /* 深色背景 */
+  --text-dark: #2C3E50;       /* 正文深色 */
+}
+
+/***** 导航栏 *****/
+.navbar {
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.97)!important;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.navbar-brand img {
+  height: 45px;
+  margin-right: 12px;
+}
+.nav-link {
+  color: var(--text-dark)!important;
+  font-weight: 500;
+  margin: 0 15px;
+  position: relative;
+}
+.nav-link:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: width 0.3s;
+}
+.nav-link:hover:after { width: 100% }
+
+/***** 首屏 *****/
+.tm-parallax {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.tm-hero-title {
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+.tm-hero-subtitle {
+  font-size: 1.4rem;
+  margin: 25px 0;
+}
+
+/***** 产品区块 *****/
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+}
+.product-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, var(--primary-blue), var(--accent-gold));
+  border-radius: 18px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/***** 案例展示 *****/
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+.case-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.case-item img {
+  transition: transform 0.4s;
+}
+.case-item:hover img {
+  transform: scale(1.05);
+}
+
+/***** 响应式调整 *****/
+@media (max-width: 768px) {
+  .tm-hero-title { font-size: 2.5rem }
+  .product-card { margin: 10px 0 }
+  .case-grid { grid-template-columns: 1fr }
+}
+
+/***** 页脚 *****/
+.site-footer {
+  background: var(--dark-bg);
+  color: white;
+  padding: 50px 0;
+}
+.footer-contact li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.footer-contact i {
+  color: var(--accent-gold);
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+/***** 覆盖原始样式 *****/
+.tm-btn-primary {
+  background: var(--primary-blue);
+  border: none;
+  padding: 12px 35px;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+.tm-btn-primary:hover {
+  background: var(--accent-gold);
+  transform: translateY(-2px);
+}
+
+/* 包含原始视差效果 */
+.tm-parallax-2 { background-attachment: fixed }
