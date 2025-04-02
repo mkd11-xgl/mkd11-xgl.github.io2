@@ -1,142 +1,197 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>调色匠化工涂料 - 专业金属表面涂装解决方案</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/tooplate-infinite-loop.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>调色匠化工涂料 - 专业五金涂料解决方案</title>
+    <!-- 保持原有样式引用 -->
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
     <link rel="stylesheet" href="slick/slick.css">
-    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css">
-</head>
-<body>
-    <!-- 导航栏保持原结构 -->
-    <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
-        <div class="container">   
-            <div class="tm-next">
-                <a href="#infinite" class="navbar-brand">调色匠化工</a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link tm-nav-link" href="#infinite">首页</a></li>
-                    <li class="nav-item"><a class="nav-link tm-nav-link" href="#products">产品中心</a></li>
-                    <li class="nav-item"><a class="nav-link tm-nav-link" href="#cases">应用案例</a></li>
-                    <li class="nav-item"><a class="nav-link tm-nav-link" href="#contact">联系我们</a></li>
-                </ul>
-            </div>
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+    <!-- 新增企业定制样式 -->
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+  <body>    
+    <!-- 修改导航栏品牌 -->
+    <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
+      <div class="container">   
+        <div class="tm-next">
+          <a href="#infinite" class="navbar-brand">
+            <i class="fas fa-paint-roller mr-2"></i>调色匠化工
+          </a>
         </div>
+        <!-- 保持菜单结构，仅修改文字 -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link tm-nav-link" href="#infinite">首页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tm-nav-link" href="#products">产品中心</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tm-nav-link" href="#cases">应用案例</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tm-nav-link" href="#contact">联系我们</a>
+          </li>                    
+        </ul>
+      </div>
     </nav>
 
-    <!-- 首屏使用原有背景 -->
+    <!-- 首页Banner -->
     <section id="infinite" class="text-white tm-font-big tm-parallax">
-        <div class="text-center tm-hero-text-container">
-            <div class="tm-hero-text-container-inner">
-                <h2 class="tm-hero-title">专业金属表面涂装</h2>
-                <p class="tm-hero-subtitle">
-                    18年专注智能锁漆与仿古铜门漆研发<br>
-                    ISO9001认证企业 | 国家高新技术企业
-                </p>
-            </div>        
-        </div>
-        <div class="tm-next tm-intro-next">
-            <a href="#products" class="text-center tm-down-arrow-link">
-                <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
-            </a>
-        </div>      
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+          <h2 class="tm-hero-title">五金表面涂装专家</h2>
+          <p class="tm-hero-subtitle">
+            18年专注智能锁漆与仿古铜门漆研发<br>
+            ISO9001认证 | 国家高新技术企业
+          </p>
+        </div>        
+      </div>
+      <div class="tm-next tm-intro-next">
+        <a href="#products" class="text-center tm-down-arrow-link">
+          <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+        </a>
+      </div>      
     </section>
 
-    <!-- 产品中心使用原有布局 -->
+    <!-- 产品中心 -->
     <section id="products" class="tm-section-pad-top">
-        <div class="container">
-            <div class="row tm-content-box">
-                <div class="col-lg-12">
-                    <h2 class="tm-text-primary mb-4 tm-section-title">核心产品系列</h2>
-                </div>
-            </div>
-            
-            <!-- 产品项使用原有结构 -->
-            <div class="row tm-content-box">
-                <div class="col-lg-1">
-                    <i class="fas fa-3x fa-paint-brush tm-icon"></i>
-                </div>
-                <div class="col-lg-5">
-                    <div class="tm-intro-text-container">
-                        <h2 class="tm-text-primary mb-4">仿古拉丝漆</h2>
-                        <p class="mb-4">
-                            耐候等级：5级 | 干燥时间：表干≤30min<br>
-                            适用基材：铜/不锈钢/锌合金
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-1">
-                    <i class="fas fa-3x fa-atom tm-icon"></i>
-                </div>
-                <div class="col-lg-5">
-                    <div class="tm-intro-text-container">
-                        <h2 class="tm-text-primary mb-4">仿电镀漆</h2>
-                        <p class="mb-4">
-                            光泽度≥95° | 硬度≥2H<br>
-                            耐盐雾500小时
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 其他产品项保持同样结构 -->
+      <div class="container">
+        <div class="row tm-content-box">
+          <div class="col-lg-12">
+            <h2 class="tm-text-primary mb-4 tm-section-title">核心产品系列</h2>
+          </div>
         </div>
+
+        <!-- 产品项1 -->
+        <div class="row tm-content-box">
+          <div class="col-lg-1">
+            <i class="fas fa-3x fa-brush tm-icon"></i>
+          </div>
+          <div class="col-lg-5">
+            <div class="tm-intro-text-container">
+              <h2 class="tm-text-primary mb-4">仿古拉丝漆</h2>
+              <p class="mb-4">
+                耐候等级：5级 | 表干时间≤30min<br>
+                适用基材：铜/不锈钢/锌合金
+              </p>
+            </div>
+          </div>
+
+          <!-- 产品项2 -->
+          <div class="col-lg-1">
+            <i class="fas fa-3x fa-atom tm-icon"></i>
+          </div>
+          <div class="col-lg-5">
+            <div class="tm-intro-text-container">
+              <h2 class="tm-text-primary mb-4">仿电镀漆</h2>
+              <p class="mb-4">
+                光泽度≥95° | 硬度≥2H<br>
+                耐盐雾500小时
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 更多产品项保持同样结构 -->
+      </div>
     </section>
 
-    <!-- 应用案例使用原有画廊结构 -->
+    <!-- 应用案例 -->
     <section id="cases" class="tm-section-pad-top">
-        <div class="container tm-container-gallery">
-            <div class="row">
-                <div class="text-center col-12">
-                    <h2 class="tm-text-primary tm-section-title mb-4">应用案例</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="mx-auto tm-gallery-container">
-                        <div class="grid tm-gallery">
-                            <!-- 使用原始图片 -->
-                            <a href="img/gallery-img-01.jpg">
-                                <figure class="effect-honey tm-gallery-item">
-                                    <img src="img/gallery-tn-01.jpg" alt="案例1" class="img-fluid">
-                                    <figcaption>
-                                        <h2><i>铜门涂装案例</i></h2>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <!-- 更多案例保持同样结构 -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container tm-container-gallery">
+        <div class="row">
+          <div class="text-center col-12">
+            <h2 class="tm-text-primary tm-section-title mb-4">成功案例</h2>
+          </div>            
         </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="mx-auto tm-gallery-container">
+              <div class="grid tm-gallery">
+                <!-- 案例1 -->
+                <a href="img/gallery-img-01.jpg">
+                  <figure class="effect-honey tm-gallery-item">
+                    <img src="img/gallery-tn-01.jpg" alt="铜门案例" class="img-fluid">
+                    <figcaption>
+                      <h2><i>仿古铜门涂装</i></h2>
+                    </figcaption>
+                  </figure>
+                </a>
+                <!-- 更多案例保持同样结构 -->
+              </div>
+            </div>                
+          </div>        
+        </div>
+      </div>
     </section>
 
-    <!-- 联系我们表单保持原结构 -->
+    <!-- 联系我们 -->
     <section id="contact" class="tm-section-pad-top tm-parallax-2">
-        <div class="container tm-container-contact">
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- 原联系表单结构 -->
-                </div>
-                <div class="col-md-6">
-                    <!-- 原联系信息结构 -->
-                </div>
+      <div class="container tm-container-contact">
+        <div class="row">
+          <div class="col-md-6">
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="您的姓名" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control" placeholder="联系电话" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" rows="6" placeholder="需求描述"></textarea>
+              </div>
+              <button type="submit" class="btn tm-btn-primary">提交需求</button>
+            </form>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="contact-info">
+              <h4><i class="fas fa-map-marker-alt"></i> 广东顺德生产基地</h4>
+              <p>佛山市顺德区XX工业区XX路12号</p>
+              
+              <h4 class="mt-4"><i class="fas fa-phone"></i> 服务热线</h4>
+              <p>0757-8888XXXX<br>周一至周五 8:30-17:30</p>
+
+              <h4 class="mt-4"><i class="fas fa-envelope"></i> 电子邮箱</h4>
+              <p>sales@tiaosejiang.com</p>
             </div>
+          </div>
         </div>
+      </div>
+      
+      <footer class="text-center small tm-footer">
+        <p class="mb-0">
+          佛山市顺德区调色匠化工涂料有限公司<br>
+          粤ICP备XXXXXXXX号 | 版权所有
+        </p>
+      </footer>
     </section>
 
-    <!-- 脚本文件保持原样 -->
-    <script src="js/jquery-1.9.1.min.js"></script>
+    <!-- 保持原有脚本引用 -->
+    <script src="js/jquery-1.9.1.min.js"></script>     
     <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- 原始脚本保持不变 -->
-</body>
+    
+    <!-- 新增定制脚本 -->
+    <script>
+    // 初始化案例弹窗
+    $('.tm-gallery').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery: { enabled: true }
+    });
+
+    // 表单提交处理
+    $('form').submit(function(e){
+      e.preventDefault();
+      alert('需求已提交，我们将尽快联系您！');
+      this.reset();
+    });
+    </script>
+  </body>
 </html>
