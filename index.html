@@ -10,16 +10,13 @@
     <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
- <style>
-/* 修改轮播分页按钮样式 */
 .slick-dots {
   position: absolute;
-  bottom: 20px;  /* 调整位置，使按钮更靠下 */
+  bottom: 30px;  /* 适当调整位置 */
   left: 50%;
-  transform: translateX(-50%);  /* 使按钮居中 */
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  gap: 10px;  /* 调整按钮之间的间距 */
 }
 
 .slick-dots li {
@@ -27,30 +24,29 @@
 }
 
 .slick-dots li button {
-  background-color: transparent;
-  border: 2px solid #fff; /* 白色边框 */
-  border-radius: 50%;
-  width: 16px;  /* 按钮大小 */
-  height: 16px;
-  transition: all 0.3s ease;  /* 流畅的过渡效果 */
+  background-color: #333;  /* 按钮背景为深灰色 */
+  border: none;  /* 去掉边框 */
+  border-radius: 5px;  /* 圆角矩形 */
+  width: 50px;  /* 按钮宽度 */
+  height: 10px;  /* 按钮高度 */
+  transition: all 0.3s ease;  /* 流畅过渡 */
   cursor: pointer;
+  opacity: 0.7;  /* 默认透明度 */
 }
 
 .slick-dots li button:before {
-  content: ''; /* 移除原来的圆点 */
+  content: ''; /* 移除默认的圆点 */
 }
 
 .slick-dots li.slick-active button {
-  background-color: #fff;  /* 激活时的白色背景 */
-  border-color: #fff;  /* 激活时边框为白色 */
-  transform: scale(1.2);  /* 激活按钮放大 */
+  background-color: #fff;  /* 激活时白色背景 */
+  opacity: 1;  /* 激活按钮时去除透明度 */
 }
 
 .slick-dots li button:hover {
-  background-color: #333; /* 鼠标悬停时的黑色背景 */
-  border-color: #333; /* 悬停时边框颜色为黑色 */
+  background-color: #555; /* 悬停时背景色变为中灰色 */
+  opacity: 1;  /* 悬停时去除透明度 */
 }
-</style>
   </head>
   <body>    
     <!-- 修改后的导航栏 -->
