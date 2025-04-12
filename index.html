@@ -10,6 +10,42 @@
     <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+    <style>
+/* 修改轮播分页按钮样式 */
+.slick-dots {
+  bottom: -30px; /* 位置调整，向下移动 */
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots li button {
+  background: transparent;
+  border: 2px solid #999; /* 默认边框为灰色 */
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.slick-dots li button:before {
+  content: ''; /* 去掉默认的圆点 */
+}
+
+.slick-dots li.slick-active button {
+  background-color: #fff; /* 激活按钮变为白色 */
+  border-color: #fff; /* 激活时的边框颜色 */
+}
+
+.slick-dots li button:hover {
+  background-color: #333; /* 鼠标悬停时的背景 */
+  border-color: #444; /* 鼠标悬停时的边框 */
+}
+</style>
   </head>
   <body>    
     <!-- 修改后的导航栏 -->
