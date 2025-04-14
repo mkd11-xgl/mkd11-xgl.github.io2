@@ -14,41 +14,47 @@
 /* 修改轮播分页按钮样式 */
 .slick-dots {
   position: absolute;
-  bottom: 30px;  /* 调整位置，使按钮更靠下 */
+  bottom: 40px;  /* 增大这个值使整体更靠下 */
   left: 50%;
-  transform: translateX(-50%);  /* 使按钮居中 */
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
+  align-items: center;  /* 新增垂直居中 */
   gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 .slick-dots li {
   list-style: none;
+  font-size: 0;  /* 确保移除任何潜在的文字 */
 }
 
 .slick-dots li button {
   background-color: transparent;
-  border: 2px solid #fff; /* 白色边框 */
+  border: 2px solid #fff;
   border-radius: 50%;
-  width: 16px;  /* 按钮大小 */
+  width: 16px;
   height: 16px;
-  transition: all 0.3s ease;  /* 流畅的过渡效果 */
+  transition: all 0.3s ease;
   cursor: pointer;
+  text-indent: -9999px;  /* 隐藏可能存在的文字 */
+  overflow: hidden;  /* 配合文字隐藏 */
 }
 
-.slick-dots li button:before {
-  content: ''; /* 移除原来的圆点 */
+.slick-dots li button:focus {
+  outline: none;  /* 移除点击轮廓 */
 }
 
 .slick-dots li.slick-active button {
-  background-color: #fff;  /* 激活时的白色背景 */
-  border-color: #fff;  /* 激活时边框为白色 */
-  transform: scale(1.2);  /* 激活按钮放大 */
+  background-color: #fff;
+  border-color: #fff;
+  transform: scale(1.2);
 }
 
 .slick-dots li button:hover {
-  background-color: #333; /* 鼠标悬停时的黑色背景 */
-  border-color: #333; /* 悬停时边框颜色为黑色 */
+  background-color: #333;
+  border-color: #333;
 }
 </style>
 
