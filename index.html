@@ -303,12 +303,61 @@ Colorist adheres to the business philosophy of honest management, steady develop
       <div class="container tm-container-contact">
         <div class="row">
             <div class="col-md-6">
-           <form action="https://formsubmit.co/13420687810@163.com" method="POST">
-  <input type="text" name="name" placeholder="您的姓名" required>
-  <input type="email" name="email" placeholder="您的邮箱" required>
-  <textarea name="message" placeholder="留言内容" required></textarea>
+          <!-- 联系我们表单 -->
+<form action="https://formsubmit.co/13420687810@163.com" method="POST">
+  <input type="hidden" name="_next" value="https://your-website.com/thank-you-page"> <!-- 可选：设置提交后跳转到的页面 -->
+
+  <!-- 用户姓名 -->
+  <div>
+    <label for="name">您的姓名：</label>
+    <input type="text" name="name" id="name" placeholder="请输入您的姓名" required>
+  </div>
+  
+  <!-- 用户邮箱 -->
+  <div>
+    <label for="email">您的邮箱：</label>
+    <input type="email" name="email" id="email" placeholder="请输入您的邮箱" required>
+  </div>
+  
+  <!-- 留言内容 -->
+  <div>
+    <label for="message">留言内容：</label>
+    <textarea name="message" id="message" placeholder="请输入您的留言" required></textarea>
+  </div>
+
+  <!-- 提交按钮 -->
   <button type="submit">提交</button>
 </form>
+
+<!-- 样式调整 -->
+<style>
+  form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #099;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #007a87;
+  }
+</style>
 
             </div>
             <div class="col-md-6">
