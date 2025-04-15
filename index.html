@@ -248,19 +248,17 @@ Colorist adheres to the business philosophy of honest management, steady develop
   </div>
 </section>
 
-<!-- 在CSS部分添加以下内容来实现悬停效果 -->
+<!-- 在CSS部分添加以下内容来实现滑动效果 -->
 <style>
   .tm-gallery-item figcaption p {
-    display: none; /* 初始状态下隐藏文字 */
-    transition: opacity 0.3s ease;
-    opacity: 0;
+    transform: translateY(20px); /* 初始状态：文字位于下方 */
+    opacity: 0; /* 初始状态下隐藏文字 */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* 设置滑动和渐变动画 */
   }
 
   .tm-gallery-item:hover figcaption p {
-    display: block;
-    opacity: 1; /* 鼠标悬停时显示文字 */
-  }
-</style>
+    transform: translate
+
 
     <!-- Contact模块（完整保留） -->
     <section id="contact" class="tm-section-pad-top tm-parallax-2">
