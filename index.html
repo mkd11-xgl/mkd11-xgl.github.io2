@@ -203,7 +203,7 @@ Colorist adheres to the business philosophy of honest management, steady develop
                 <img src="img/gallery-tn-01.jpg" alt="Image 1" class="img-fluid">
                 <figcaption>
                   <h2><i>精湛打板调色</i></h2>
-                  <p>由多位拥有20年以上经验的老师傅亲自调制，确保色彩还原真实、层次丰富。</p>
+                  <p class="description">由多位拥有20年以上经验的老师傅亲自调制，确保色彩还原真实、层次丰富。</p>
                 </figcaption>
               </figure>
             </a>
@@ -214,7 +214,7 @@ Colorist adheres to the business philosophy of honest management, steady develop
                 <img src="img/gallery-tn-02.jpg" alt="Image 2" class="img-fluid">
                 <figcaption>
                   <h2><i>精选优质原料</i></h2>
-                  <p>从底材到光油，每一环都经过严选，成品质感细腻，光泽自然高级。</p>
+                  <p class="description">从底材到光油，每一环都经过严选，成品质感细腻，光泽自然高级。</p>
                 </figcaption>
               </figure>
             </a>
@@ -225,7 +225,7 @@ Colorist adheres to the business philosophy of honest management, steady develop
                 <img src="img/gallery-tn-03.jpg" alt="Image 3" class="img-fluid">
                 <figcaption>
                   <h2><i>客户信任之选</i></h2>
-                  <p>凭借稳定品质与良好口碑，赢得众多客户口口相传的信赖。</p>
+                  <p class="description">凭借稳定品质与良好口碑，赢得众多客户口口相传的信赖。</p>
                 </figcaption>
               </figure>
             </a>
@@ -236,7 +236,7 @@ Colorist adheres to the business philosophy of honest management, steady develop
                 <img src="img/gallery-tn-04.jpg" alt="Image 4" class="img-fluid">
                 <figcaption>
                   <h2><i>即将上线</i></h2>
-                  <p>更多优势模块即将更新，敬请期待。</p>
+                  <p class="description">更多优势模块即将更新，敬请期待。</p>
                 </figcaption>
               </figure>
             </a>
@@ -248,6 +248,19 @@ Colorist adheres to the business philosophy of honest management, steady develop
   </div>
 </section>
 
+<!-- 在CSS部分添加以下内容来实现悬停效果 -->
+<style>
+  .tm-gallery-item figcaption p {
+    display: none; /* 初始状态下隐藏文字 */
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .tm-gallery-item:hover figcaption p {
+    display: block;
+    opacity: 1; /* 鼠标悬停时显示文字 */
+  }
+</style>
 
     <!-- Contact模块（完整保留） -->
     <section id="contact" class="tm-section-pad-top tm-parallax-2">
