@@ -190,14 +190,21 @@ Colorist adheres to the business philosophy of honest management, steady develop
     </section>
 
     <!-- Gallery模块（完整保留） -->
-<!-- Gallery模块（四个原始卡片展示） -->
-<section id="gallery" class="tm-section-pad-top">
+<!-- 为什么选择我们模块 -->
+<section id="why-choose-us" class="tm-section-pad-top">
   <div class="container tm-container-gallery">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="section-title">为什么选择我们<br><small>Why Choose Us</small></h2>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col-12">
         <div class="mx-auto tm-gallery-container">
           <div class="grid tm-gallery">
-            <!-- 图片1 -->
+            
+            <!-- 模块 1 -->
             <a href="img/gallery-img-01.jpg">
               <figure class="effect-honey tm-gallery-item">
                 <img src="img/gallery-tn-01.jpg" alt="Image 1" class="img-fluid">
@@ -208,7 +215,7 @@ Colorist adheres to the business philosophy of honest management, steady develop
               </figure>
             </a>
 
-            <!-- 图片2 -->
+            <!-- 模块 2 -->
             <a href="img/gallery-img-02.jpg">
               <figure class="effect-honey tm-gallery-item">
                 <img src="img/gallery-tn-02.jpg" alt="Image 2" class="img-fluid">
@@ -219,7 +226,7 @@ Colorist adheres to the business philosophy of honest management, steady develop
               </figure>
             </a>
 
-            <!-- 图片3 -->
+            <!-- 模块 3 -->
             <a href="img/gallery-img-03.jpg">
               <figure class="effect-honey tm-gallery-item">
                 <img src="img/gallery-tn-03.jpg" alt="Image 3" class="img-fluid">
@@ -230,7 +237,7 @@ Colorist adheres to the business philosophy of honest management, steady develop
               </figure>
             </a>
 
-            <!-- 图片4 -->
+            <!-- 模块 4 -->
             <a href="img/gallery-img-04.jpg">
               <figure class="effect-honey tm-gallery-item">
                 <img src="img/gallery-tn-04.jpg" alt="Image 4" class="img-fluid">
@@ -247,6 +254,35 @@ Colorist adheres to the business philosophy of honest management, steady develop
     </div>
   </div>
 </section>
+
+<!-- CSS 动画效果 -->
+<style>
+  .tm-gallery-item figcaption p {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .tm-gallery-item:hover figcaption p {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  .section-title small {
+    display: block;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 0.3rem;
+  }
+</style>
+
 
 <!-- 在CSS部分添加以下内容来实现滑动效果 -->
 <style>
