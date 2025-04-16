@@ -299,53 +299,69 @@ Colorist adheres to the business philosophy of honest management, steady develop
 
 
     <!-- Contact模块（完整保留） -->
-<!-- Contact Us -->
-<section id="contact" class="tm-section-pad-top tm-parallax-2">
-  <div class="container tm-container-contact">
-    <div class="row">
-      <div class="text-center col-12">
-        <h2 class="tm-section-title mb-4">Contact Us</h2>
-        <p class="mb-5">
-          Proin enim orci, tincidunt quis suscipit in, placerat nec est. Vestibulum posuere faucibus posuere. 
-          Quisque aliquam velit eget leo blandit egestas. Nulla id posuere felis, quis tristique nulla.
-        </p>
-      </div>
-
-      <div class="col-sm-12 col-md-6">
-        <form action="#" method="POST">
-          <input type="text" name="name" class="form-control rounded" placeholder="Your Name" required />
-          <input type="email" name="email" class="form-control rounded" placeholder="Your Email" required />
-          <textarea rows="5" name="message" class="form-control rounded" placeholder="Message" required></textarea>
-          <button type="submit" class="btn btn-primary tm-btn-submit rounded">Submit</button>
-        </form>
-      </div>
-
-      <div class="col-sm-12 col-md-6">
-        <div class="contact-item">
-          <a rel="nofollow" href="mailto:mail@company.com" class="item-link">
-            <i class="far fa-envelope mr-2 tm-contact-icon"></i>
-            mail@company.com
-          </a>
+<!-- Contact -->
+<section class="tm-section-contact" id="contact">
+  <div class="row">
+    <div class="col-lg-6 tm-contact-left">
+      <form action="#" method="POST" class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required="" />
         </div>
-        <div class="contact-item">
-          <a rel="nofollow" href="#" class="item-link">
-            <i class="fas fa-globe-americas mr-2 tm-contact-icon"></i>
-            Chat Online
-          </a>
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" placeholder="Your Email" required="" />
         </div>
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt mr-2 tm-contact-icon"></i>
-          Our Location
+        <div class="form-group">
+          <textarea rows="5" name="message" class="form-control" placeholder="Message..." required=""></textarea>
         </div>
-        <div class="contact-item">
-          <i class="fas fa-phone-square mr-2 tm-contact-icon"></i>
-          255-662-5566
+        <div class="form-group">
+          <button type="submit" class="tm-btn tm-btn-primary tm-btn-send">Send</button>
         </div>
+      </form>
+    </div>
+    <div class="col-lg-6 tm-contact-right">
+      <div class="tm-address-box">
+        <h4 class="mb-4">Chat Online</h4>
+        <p class="mb-5">mail@company.com</p>
+        <h4 class="mb-4">Our Location</h4>
+        <p class="mb-5">255-662-5566</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Contact Styles -->
+<style>
+  .tm-section-contact {
+    padding: 60px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+
+  .tm-contact-left,
+  .tm-contact-right {
+    padding: 20px;
+  }
+
+  .contact-form .form-control {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 12px 15px;
+  }
+
+  .tm-btn-send {
+    background-color: #009999;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .tm-address-box h4 {
+    color: #009999;
+  }
+</style>
 
 
 <!-- 提交成功提示的脚本 -->
