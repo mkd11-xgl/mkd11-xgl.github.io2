@@ -308,36 +308,29 @@ Colorist adheres to the business philosophy of honest management, steady develop
         <h2 class="contact-title">联系我们</h2>
         <p class="mb-5">请填写下方信息，我们会尽快与您联系。</p>
 
-        <form id="contact-form" action="https://formsubmit.co/13420687810@163.com" method="POST" class="contact-form">
-          <!-- 隐藏字段：提交成功后不跳转页面 -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_autoresponse" value="感谢您的留言，我们会尽快联系您！">
+       <form action="https://formsubmit.co/13420687810@163.com" method="POST" class="tm-contact-form">
+  <!-- 防止跳转 -->
+  <input type="hidden" name="_next" value="https://你的域名/thank-you.html">
+  <!-- 防止垃圾信息 -->
+  <input type="hidden" name="_captcha" value="false">
 
-          <div class="form-group">
-            <input type="text" name="name" class="form-control" placeholder="姓名" required>
-          </div>
+  <div class="form-group">
+    <input type="text" name="name" class="form-control" placeholder="姓名" required>
+  </div>
 
-          <div class="form-group">
-            <input type="email" name="email" class="form-control" placeholder="邮箱" required>
-          </div>
+  <div class="form-group">
+    <input type="email" name="email" class="form-control" placeholder="邮箱" required>
+  </div>
 
-          <div class="form-group">
-            <input type="text" name="phone" class="form-control" placeholder="电话">
-          </div>
+  <div class="form-group">
+    <textarea name="message" class="form-control" rows="6" placeholder="留言内容" required></textarea>
+  </div>
 
-          <div class="form-group">
-            <textarea name="message" class="form-control" rows="5" placeholder="留言内容" required></textarea>
-          </div>
+  <div class="form-group tm-text-right">
+    <button type="submit" class="tm-btn">提交</button>
+  </div>
+</form>
 
-          <div class="form-group">
-            <button type="submit" class="tm-btn">提交</button>
-          </div>
-
-          <div id="form-status" class="text-success mt-3" style="display: none;">
-            提交成功，我们会尽快联系您！
-          </div>
-        </form>
       </div>
 
     </div>
