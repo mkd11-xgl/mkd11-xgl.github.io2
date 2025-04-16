@@ -299,48 +299,80 @@ Colorist adheres to the business philosophy of honest management, steady develop
 
 
     <!-- Contact模块（完整保留） -->
-  <section id="contact" class="tm-contact-section">
+<!-- 联系我们 Contact Form -->
+<section id="contact" class="tm-section-pad-top">
   <div class="container">
     <div class="row">
+      
+      <div class="col-lg-6">
+        <h2 class="contact-title">联系我们</h2>
+        <p class="mb-5">请填写下方信息，我们会尽快与您联系。</p>
 
-      <div class="col-md-6">
-        <h2 class="tm-text-primary mb-5">联系我们</h2>
-        <form action="https://formsubmit.co/13420687810@163.com" method="POST" class="tm-contact-form">
-
-          <!-- 表单隐藏字段设置 -->
-          <input type="hidden" name="_subject" value="来自官网的新留言">
+        <form id="contact-form" action="https://formsubmit.co/13420687810@163.com" method="POST" class="contact-form">
+          <!-- 隐藏字段：提交成功后不跳转页面 -->
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_autoresponse" value="感谢您的留言，我们会尽快联系您！">
 
           <div class="form-group">
-            <input type="text" name="name" class="form-control rounded-0" placeholder="姓名" required />
+            <input type="text" name="name" class="form-control" placeholder="姓名" required>
           </div>
+
           <div class="form-group">
-            <input type="email" name="email" class="form-control rounded-0" placeholder="邮箱" required />
+            <input type="email" name="email" class="form-control" placeholder="邮箱" required>
           </div>
+
           <div class="form-group">
-            <textarea name="message" rows="8" class="form-control rounded-0" placeholder="留言内容" required></textarea>
+            <input type="text" name="phone" class="form-control" placeholder="电话">
           </div>
-          <div class="form-group mb-0">
-            <button type="submit" class="btn btn-primary">提交</button>
+
+          <div class="form-group">
+            <textarea name="message" class="form-control" rows="5" placeholder="留言内容" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="tm-btn">提交</button>
+          </div>
+
+          <div id="form-status" class="text-success mt-3" style="display: none;">
+            提交成功，我们会尽快联系您！
           </div>
         </form>
-      </div>
-
-      <div class="col-md-6">
-        <div class="contact-info">
-          <p class="tm-text-primary mb-4">我们很乐意听到您的声音，请随时通过表单与我们联系。</p>
-          <ul class="tm-list">
-            <li>电话：13420687810</li>
-            <li>邮箱：13420687810@163.com</li>
-            <li>地址：广东省某某市某某工业区</li>
-          </ul>
-        </div>
       </div>
 
     </div>
   </div>
 </section>
+
+<!-- 提交成功提示的脚本 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // 阻止默认提交行为
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          status.style.display = "block";
+        }
+      }).catch(error => {
+        status.innerHTML = "提交失败，请稍后再试。";
+        status.style.color = "red";
+        status.style.display = "block";
+      });
+    });
+  });
+</script>
+
 
     <!-- 完整的原始JavaScript代码 -->
     <script src="js/jquery-1.9.1.min.js"></script>     
