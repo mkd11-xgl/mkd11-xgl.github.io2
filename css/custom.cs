@@ -45,3 +45,22 @@
 .tm-btn-primary:hover {
   background: var(--accent-gold);
 }
+/* ---- 你的其他 CSS 样式 ---- */
+
+/* ------- 下面是你加的按钮样式 ------- */
+@media (max-width: 768px) {
+  .btn-next, .btn-prev {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .btn-next:hover, .btn-prev:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
