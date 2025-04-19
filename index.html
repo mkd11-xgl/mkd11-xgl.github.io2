@@ -298,7 +298,6 @@ Colorist adheres to the business philosophy of honest management, steady develop
 </style>
 
 
-    <!-- Contact模块（完整保留） -->
 <section id="contact" class="tm-section-pad-top tm-parallax-2">
   <div class="container tm-container-contact">
     <div class="row">
@@ -310,18 +309,13 @@ Colorist adheres to the business philosophy of honest management, steady develop
       </div>
 
       <div class="col-sm-12 col-md-6">
-        <form action="https://formsubmit.co/13420687810@163.com" method="POST">
-          <!-- 保证字段名称正确 -->
+        <form id="contact-form">
           <input name="name" type="text" placeholder="Your Name" class="tm-input" required />
           <input name="email" type="email" placeholder="Your Email" class="tm-input" required />
           <textarea name="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
-
-          <!-- 可选隐藏字段 -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-
           <button type="submit" class="btn tm-btn-submit">Submit</button>
         </form>
+        <div id="form-status" style="margin-top: 10px; color: green;"></div>
       </div>
 
       <div class="col-sm-12 col-md-6">
@@ -329,25 +323,25 @@ Colorist adheres to the business philosophy of honest management, steady develop
           <a rel="nofollow" href="https://www.tooplate.com/contact" class="item-link">
             <i class="far fa-2x fa-comment mr-4"></i>
             <span class="mb-0">Chat Online</span>
-          </a>              
+          </a>
         </div>
         <div class="contact-item">
           <a rel="nofollow" href="mailto:mail@company.com" class="item-link">
             <i class="far fa-2x fa-envelope mr-4"></i>
             <span class="mb-0">mail@company.com</span>
-          </a>              
+          </a>
         </div>
         <div class="contact-item">
           <a rel="nofollow" href="https://www.google.com/maps" class="item-link">
             <i class="fas fa-2x fa-map-marker-alt mr-4"></i>
             <span class="mb-0">Our Location</span>
-          </a>              
+          </a>
         </div>
         <div class="contact-item">
           <a rel="nofollow" href="tel:0100200340" class="item-link">
             <i class="fas fa-2x fa-phone-square mr-4"></i>
             <span class="mb-0">255-662-5566</span>
-          </a>              
+          </a>
         </div>
         <div class="contact-item">&nbsp;</div>
       </div>
@@ -362,37 +356,36 @@ Colorist adheres to the business philosophy of honest management, steady develop
   </footer>
 </section>
 
-
-
-<!-- 提交成功提示的脚本 -->
+<!-- JS 脚本处理 AJAX 提交 -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-    const status = document.getElementById("form-status");
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // 阻止默认提交行为
-      const data = new FormData(form);
-      fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          status.style.display = "block";
-        }
-      }).catch(error => {
-        status.innerHTML = "提交失败，请稍后再试。";
-        status.style.color = "red";
-        status.style.display = "block";
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch("https://formsubmit.co/ajax/13420687810@163.com", {
+    method: "POST",
+    headers: {
+      'Accept': 'application/json'
+    },
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      document.getElementById("form-status").innerText = "Message sent successfully!";
+      form.reset();
+    } else {
+      response.json().then(data => {
+        document.getElementById("form-status").innerText = data.message || "Something went wrong.";
       });
-    });
+    }
+  })
+  .catch(error => {
+    document.getElementById("form-status").innerText = "Network error.";
   });
+});
 </script>
-
 
     <!-- 完整的原始JavaScript代码 -->
     <script src="js/jquery-1.9.1.min.js"></script>     
