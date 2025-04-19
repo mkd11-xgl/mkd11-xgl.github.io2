@@ -190,112 +190,163 @@ Colorist adheres to the business philosophy of honest management, steady develop
     </section>
 
     <!-- Gallery模块（完整保留） -->
-<!-- 为什么选择我们模块 -->
-<section id="why-choose-us" class="tm-section-pad-top pt-8 pb-10">
-  <div class="container tm-container-gallery">
-    <div class="row mb-4">
-      <div class="col-12 text-center">
-        <h2 class="section-title text-primary">为什么选择我们<br><small>Why Choose Us</small></h2>
+<section class="why-choose-us-section">
+  <div class="carousel-wrapper">
+    <button class="custom-nav prev">‹</button>
+
+    <div class="carousel-track">
+      <div class="carousel-item">
+        <h3 class="fade-in">优质原料</h3>
+        <p class="fade-in">精选高端材料，确保品质始终如一。</p>
+      </div>
+      <div class="carousel-item">
+        <h3 class="fade-in">先进工艺</h3>
+        <p class="fade-in">采用行业领先的制造技术。</p>
+      </div>
+      <div class="carousel-item">
+        <h3 class="fade-in">环保安全</h3>
+        <p class="fade-in">符合国际环保标准，使用更安心。</p>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-12">
-        <div class="mx-auto tm-gallery-container">
-          <div class="grid tm-gallery">
-            
-            <!-- 模块 1 -->
-            <a href="img/gallery-img-01.jpg">
-              <figure class="effect-honey tm-gallery-item">
-                <img src="img/gallery-tn-01.jpg" alt="Image 1" class="img-fluid">
-                <figcaption>
-                  <h2><i>精湛打板调色</i></h2>
-                  <p class="description">由多位拥有20年以上经验的老师傅亲自调制，确保色彩还原真实、层次丰富。</p>
-                </figcaption>
-              </figure>
-            </a>
-
-            <!-- 模块 2 -->
-            <a href="img/gallery-img-02.jpg">
-              <figure class="effect-honey tm-gallery-item">
-                <img src="img/gallery-tn-02.jpg" alt="Image 2" class="img-fluid">
-                <figcaption>
-                  <h2><i>精选优质原料</i></h2>
-                  <p class="description">从底材到光油，每一环都经过严选，成品质感细腻，光泽自然高级。</p>
-                </figcaption>
-              </figure>
-            </a>
-
-            <!-- 模块 3 -->
-            <a href="img/gallery-img-03.jpg">
-              <figure class="effect-honey tm-gallery-item">
-                <img src="img/gallery-tn-03.jpg" alt="Image 3" class="img-fluid">
-                <figcaption>
-                  <h2><i>客户信任之选</i></h2>
-                  <p class="description">凭借稳定品质与良好口碑，赢得众多客户口口相传的信赖。</p>
-                </figcaption>
-              </figure>
-            </a>
-
-            <!-- 模块 4 -->
-            <a href="img/gallery-img-04.jpg">
-              <figure class="effect-honey tm-gallery-item">
-                <img src="img/gallery-tn-04.jpg" alt="Image 4" class="img-fluid">
-                <figcaption>
-                  <h2><i>即将上线</i></h2>
-                  <p class="description">更多优势模块即将更新，敬请期待。</p>
-                </figcaption>
-              </figure>
-            </a>
-
-          </div>
-        </div>                
-      </div>        
-    </div>
+    <button class="custom-nav next">›</button>
   </div>
 </section>
 
-
-<!-- 样式调整 -->
 <style>
-  .tm-gallery-item figcaption p {
-    transform: translateY(20px);
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-  }
+.why-choose-us-section {
+  padding: 2rem;
+  background: #f7f7f7;
+  text-align: center;
+  position: relative;
+}
 
-  .tm-gallery-item:hover figcaption p {
-    transform: translateY(0);
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.custom-nav {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.custom-nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.custom-nav.prev {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-nav.next {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  to {
     opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+/* ✅ 手机端优化 */
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  .section-title {
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: #6D8B99; /* ✅ 莫兰迪蓝灰色 */
-    line-height: 1.4;
-    margin-bottom: 0;
+  .custom-nav.prev,
+  .custom-nav.next {
+    position: static;
+    transform: none;
+    font-size: 1.5rem;
+    background: #222;
+    border-radius: 6px;
+    padding: 0.4rem 1rem;
   }
 
-  .section-title small {
-    display: block;
-    font-size: 1.2rem;
-    color: #999;
-    margin-top: 0.3rem;
+  .carousel-item {
+    padding: 1rem 0.5rem;
   }
-
-  .pt-8 {
-    padding-top: 1.2rem !important; /* ✅ 更窄的上间距 */
-  }
-
-  .pb-10 {
-    padding-bottom: 1.8rem !important; /* ✅ 更窄的下间距 */
-  }
-
-  .text-primary {
-    color: #6D8B99 !important; /* ✅ 替换原来的 #099 */
-  }
+}
 </style>
+
+<script>
+  const items = document.querySelectorAll(".carousel-item");
+  const prevBtn = document.querySelector(".custom-nav.prev");
+  const nextBtn = document.querySelector(".custom-nav.next");
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    items.forEach((item, index) => {
+      item.classList.remove("active");
+      if (index === currentIndex) {
+        item.classList.add("active");
+      }
+    });
+  }
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+  });
+
+  // 初始化
+  updateCarousel();
+</script>
+
 
 
 <section id="contact" class="tm-section-pad-top tm-parallax-2">
