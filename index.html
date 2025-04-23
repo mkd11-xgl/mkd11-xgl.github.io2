@@ -190,35 +190,112 @@ Colorist adheres to the business philosophy of honest management, steady develop
     </section>
 
     <!-- Gallery模块（完整保留） -->
-<section class="why-choose-us-section">
-  <h2 class="section-title">Why Choose Us</h2>
-  <div class="slider-container">
-    <button class="nav-button prev" aria-label="Previous">&#10094;</button>
-
-    <div class="slider-track">
-      <div class="card">
-        <img src="your-icon1.png" alt="Icon 1" />
-        <div class="card-text">High-Quality Materials</div>
-      </div>
-      <div class="card">
-        <img src="your-icon2.png" alt="Icon 2" />
-        <div class="card-text">Custom Finishes</div>
-      </div>
-      <div class="card">
-        <img src="your-icon3.png" alt="Icon 3" />
-        <div class="card-text">Expert Craftsmanship</div>
-      </div>
-      <div class="card">
-        <img src="your-icon4.png" alt="Icon 4" />
-        <div class="card-text">Fast Turnaround</div>
+<!-- 为什么选择我们模块 -->
+<section id="why-choose-us" class="tm-section-pad-top pt-8 pb-10">
+  <div class="container tm-container-gallery">
+    <div class="row mb-4">
+      <div class="col-12 text-center">
+        <h2 class="section-title text-primary">为什么选择我们<br><small>Why Choose Us</small></h2>
       </div>
     </div>
 
-    <button class="nav-button next" aria-label="Next">&#10095;</button>
+    <div class="row">
+      <div class="col-12">
+        <div class="mx-auto tm-gallery-container">
+          <div class="grid tm-gallery">
+            
+            <!-- 模块 1 -->
+            <a href="img/gallery-img-01.jpg">
+              <figure class="effect-honey tm-gallery-item">
+                <img src="img/gallery-tn-01.jpg" alt="Image 1" class="img-fluid">
+                <figcaption>
+                  <h2><i>精湛打板调色</i></h2>
+                  <p class="description">由多位拥有20年以上经验的老师傅亲自调制，确保色彩还原真实、层次丰富。</p>
+                </figcaption>
+              </figure>
+            </a>
+
+            <!-- 模块 2 -->
+            <a href="img/gallery-img-02.jpg">
+              <figure class="effect-honey tm-gallery-item">
+                <img src="img/gallery-tn-02.jpg" alt="Image 2" class="img-fluid">
+                <figcaption>
+                  <h2><i>精选优质原料</i></h2>
+                  <p class="description">从底材到光油，每一环都经过严选，成品质感细腻，光泽自然高级。</p>
+                </figcaption>
+              </figure>
+            </a>
+
+            <!-- 模块 3 -->
+            <a href="img/gallery-img-03.jpg">
+              <figure class="effect-honey tm-gallery-item">
+                <img src="img/gallery-tn-03.jpg" alt="Image 3" class="img-fluid">
+                <figcaption>
+                  <h2><i>客户信任之选</i></h2>
+                  <p class="description">凭借稳定品质与良好口碑，赢得众多客户口口相传的信赖。</p>
+                </figcaption>
+              </figure>
+            </a>
+
+            <!-- 模块 4 -->
+            <a href="img/gallery-img-04.jpg">
+              <figure class="effect-honey tm-gallery-item">
+                <img src="img/gallery-tn-04.jpg" alt="Image 4" class="img-fluid">
+                <figcaption>
+                  <h2><i>即将上线</i></h2>
+                  <p class="description">更多优势模块即将更新，敬请期待。</p>
+                </figcaption>
+              </figure>
+            </a>
+
+          </div>
+        </div>                
+      </div>        
+    </div>
   </div>
 </section>
 
 
+<!-- 样式调整 -->
+<style>
+  .tm-gallery-item figcaption p {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .tm-gallery-item:hover figcaption p {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #6D8B99; /* ✅ 莫兰迪蓝灰色 */
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+
+  .section-title small {
+    display: block;
+    font-size: 1.2rem;
+    color: #999;
+    margin-top: 0.3rem;
+  }
+
+  .pt-8 {
+    padding-top: 1.2rem !important; /* ✅ 更窄的上间距 */
+  }
+
+  .pb-10 {
+    padding-bottom: 1.8rem !important; /* ✅ 更窄的下间距 */
+  }
+
+  .text-primary {
+    color: #6D8B99 !important; /* ✅ 替换原来的 #099 */
+  }
+</style>
 <section id="contact" class="tm-section-pad-top tm-parallax-2">
   <div class="container tm-container-contact">
     <div class="row">
